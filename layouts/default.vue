@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar dark prominent>
+    <v-toolbar fixed>
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
 
       <v-toolbar-title>
@@ -16,6 +16,5 @@
       </v-btn>
     </v-toolbar>
     <slot />
-
   </div>
 </template>
