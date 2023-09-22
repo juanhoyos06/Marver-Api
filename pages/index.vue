@@ -1,17 +1,19 @@
 <template>
   <v-item-group selected-class="bg-primary">
     <v-container>
-      <v-row>
-        <v-col v-for="item in characters" :key="item.id" cols="12" md="4">
+      <h1 class="text-center">Personajes</h1>
+      <br>
+      <v-row >
+        <v-col v-for="item in characters" :key="item.id" cols="cols" md="4">
           <v-item v-slot="{ selectedClass, toggle }">
-            <v-card class="mx-auto p" max-width="344" dark height="200" @click="toggle">
+            <v-card class="mx-auto pa-5" height="400" width="300" dark @click="toggle" color="secundary" elevation="18">
 
-              <v-img  :src="item.thumbnail.path + '.' + item.thumbnail.extension" height="auto" cover>
+              <v-img  :src="item.thumbnail.path + '.' + item.thumbnail.extension" height="330" cover>
               </v-img>
               
               
+              <v-card-title class="text-center">{{ item.name }}</v-card-title>
             </v-card>
-            <v-card-title>{{ item.name }}</v-card-title>
           </v-item>
         </v-col>
       </v-row>
