@@ -1,4 +1,5 @@
 <template>
+  <div>
     <v-toolbar dark prominent>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
@@ -14,21 +15,7 @@
         <v-icon>mdi-export</v-icon>
       </v-btn>
     </v-toolbar>
-    
+    <slot />
 
+  </div>
 </template>
-<script setup>
-const titleApp = ref("App de Tareas")
-let likes = ref(0)
-
-const incrementLikes = () => {
-  // NOTA: Recuerda acceder al valor de la propiedad con .value
-  likes.value++
-}
-</script>
-
-<style>
-.links {
-  margin: 15px;
-}
-</style>
