@@ -18,10 +18,10 @@
           </v-item>
         </v-col>
       </v-row>
-      <v-dialog v-model="dialog" max-width="700px" max-height="500px">
-        <v-card>
-          <v-card-title class="text-center"
-            style="font-size: 30px; font-family: Times New Roman, serif; font-weight: bold">
+      <v-dialog v-model="dialog" max-width="700px" max-height="400px">
+        <v-card style="border-radius: 20px">
+          <v-card-title class="text-center" 
+            style="font-size: 30px; font-family: Times New Roman, serif; font-weight: bold; background-color: black; color: white;">
             {{ selectedCharacter.name }}
           </v-card-title>
           <v-row no-gutters>
@@ -33,7 +33,7 @@
             <v-col cols="6" class="d-flex align-center">
               <v-row no-gutters>
                 <v-card-subtitle>
-                  Description
+                  Descripción
                 </v-card-subtitle>
 
                 <v-card-text>
@@ -44,49 +44,35 @@
                     Estadisticas
                   </v-card-title>
                   <v-card-subtitle>
-                    Numero de comics:
+                    Numero de comics: {{ selectedCharacter.comics.available }}
                   </v-card-subtitle>
-
-                  <v-card-text>
-                    {{ selectedCharacter.comics.available }}
-                  </v-card-text>
 
                   <v-card-subtitle>
-                    Numero de series:
+                    Numero de series: {{ selectedCharacter.series.available }}
                   </v-card-subtitle>
-
-                  <v-card-text>
-                    {{ selectedCharacter.series.available }}
-                  </v-card-text>
 
                   <v-card-subtitle>
-                    Numero de historias:
+                    Numero de historias: {{ selectedCharacter.stories.available }}
                   </v-card-subtitle>
-
-                  <v-card-text>
-                    {{ selectedCharacter.stories.available }}
-                  </v-card-text>
 
                   <v-card-subtitle>
-                    Numero de eventos:
+                    Numero de eventos: {{ selectedCharacter.events.available }}
                   </v-card-subtitle>
-  
-                  <v-card-text>
-                    {{ selectedCharacter.events.available }}
-                  </v-card-text>
+
                 </v-col>
 
                 <v-col>
                   <v-card-title style="font-size: 20px; font-family: Times New Roman, serif; font-weight: bold">
-                    Series
+                    Top 3 Series
                   </v-card-title>
-                  <v-card-text>
-                    {{ selectedCharacter.series.available }}
-                  </v-card-text>
-                  <v-card-text>
-                    {{ selectedCharacter.stories.available }}
-                  </v-card-text>
 
+                  <v-card-text>
+                    <li v-for="item in selectedCharacter.series.items.slice(0, 3)">
+                      {{ item.name }}
+                    </li>
+                  <!-- </v-card-subtitle>  -->
+                  </v-card-text>
+                
 
 
                 </v-col>
