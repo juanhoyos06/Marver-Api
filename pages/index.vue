@@ -1,7 +1,7 @@
 <template>
   <v-item-group selected-class="bg-primary">
     <v-container>
-      <h1 class="text-center">Personajes</h1>
+      <h1 class="text-center">Personajes!!!!</h1>
       <br>
       <v-row>
         <v-col v-for="item in characters" :key="item.id" cols="cols" md="4">
