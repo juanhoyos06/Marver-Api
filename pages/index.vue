@@ -6,7 +6,7 @@
       <v-row>
         <v-col v-for="item in characters" :key="item.id" cols="cols" md="4">
           <v-item v-slot="{ selectedClass, toggle }">
-            <v-card class="mx-auto pa-5" height="400" width="300" dark @click="openDialog(item)" color="black"
+            <v-card class="mx-auto pa-6" height="400" width="300" dark @click="openDialog(item)" color="black"
               elevation="18">
 
               <v-img :src="item.thumbnail.path + '.' + item.thumbnail.extension" height="330" cover>
